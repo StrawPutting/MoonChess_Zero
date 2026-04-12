@@ -54,7 +54,7 @@ def play_vs_ai():
     policy_net = DQN(16, 9).to(device)
     
     try:
-        policy_net.load_state_dict(torch.load("Models2/moonchess_policy_10000.pth", map_location=device))
+        policy_net.load_state_dict(torch.load("Models/moonchess_policy_400000.pth", map_location=device))
         print("已加载训练好的模型!")
     except FileNotFoundError:
         print("警告: 未找到训练好的模型，使用随机初始化的模型!")
